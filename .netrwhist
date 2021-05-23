@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/loadingbg/bot/src/main/java'
+let g:netrw_dirhist_3='/home/loadingbg/bot/src/main/java/bot'
+let g:netrw_dirhist_2='/home/loadingbg/.config/nvim'
+let g:netrw_dirhist_1='/home/loadingbg/custom_command_bot/src/main/java/bot/commands/core/music'
