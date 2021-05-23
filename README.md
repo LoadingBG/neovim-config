@@ -2,6 +2,7 @@
 Configuration for NeoVim
 
 ## Structure
+```
 .
 ├── coc-settings.json -> coc.nvim settings
 ├── functions         -> custom functions
@@ -14,3 +15,4 @@ Configuration for NeoVim
 │   └── syntax        -> syntax higlighting and support plugins
 ├── settings          -> neovim settings
 └── syntax            -> custom syntax files
+```
