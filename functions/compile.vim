@@ -122,7 +122,7 @@ function! s:CompileAndRun()
         \'erlang'    : 'escript '                 . l:file,
         \'st'        : 'gst '                     . l:file,
         \'nasm'      : 'nasm -felf64 '            . l:file . ' -o ' . l:noext . '.o && ld ' . l:noext . '.o -o ' . l:noext . ' && ' . l:noext . ' ; rm ' . l:noext . '.o ' . l:noext,
-        \'apl'       : 'apl '                     . l:file,
+        \'apl'       : 'apl -f '                  . l:file,
         \'html'      : 'firefox '                 . l:file
     \}
     let l:command = get(l:command_map, &filetype, '')
