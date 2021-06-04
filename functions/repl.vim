@@ -101,7 +101,7 @@ function! s:StartREPL()
         \'erlang'    : 'erl',
         \'st'        : 'gst',
         \'nasm'      : 'rappel',
-        \'apl'       : 'apl',
+        \'apl'       : 'apl --noColor',
         \'html'      : ''
     \}
     let l:command = get(l:command_map, &filetype, '')
