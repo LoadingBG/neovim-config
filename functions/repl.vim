@@ -50,6 +50,7 @@
 "             cd rappel
 "             CC=clang make (requires Clang)
 "             sudo mv bin/rappel /usr/bin
+" apl:        (installed)
 " html:       (none)
 
 let s:code_repl_nrs = {}
@@ -100,6 +101,7 @@ function! s:StartREPL()
         \'erlang'    : 'erl',
         \'st'        : 'gst',
         \'nasm'      : 'rappel',
+        \'apl'       : 'apl',
         \'html'      : ''
     \}
     let l:command = get(l:command_map, &filetype, '')
