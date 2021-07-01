@@ -77,7 +77,7 @@ function! s:StartREPL()
         \'nim'       : 'nim secret',
         \'c'         : '',
         \'cpp'       : 'cling',
-        \'cs'        : 'charp',
+        \'cs'        : 'csharp',
         \'d'         : 'dub run drepl',
         \'rust'      : 'papyrus',
         \'go'        : 'igo',
