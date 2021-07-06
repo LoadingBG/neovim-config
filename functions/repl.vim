@@ -113,6 +113,9 @@ function! s:StartREPL()
 endfunction
 
 function! s:StopREPL(buffer_nr)
+    if &filetype ==# 'nerdtree'
+        return
+    endif
     let l:repl_nr = get(s:code_repl_nrs, a:buffer_nr . '', -1)
     if l:repl_nr != -1
         exec l:repl_nr . 'bdelete!'
