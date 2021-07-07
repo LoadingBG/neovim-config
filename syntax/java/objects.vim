@@ -3,6 +3,7 @@ syntax keyword javaCommonClass java.lang.Boolean       Boolean
 syntax keyword javaCommonClass java.lang.Character     Character
 syntax keyword javaCommonClass java.lang.Double        Double
 syntax keyword javaCommonClass java.lang.Float         Float
+syntax keyword javaCommonClass java.lang.Byte          Byte
 syntax keyword javaCommonClass java.lang.Short         Short
 syntax keyword javaCommonClass java.lang.Integer       Integer
 syntax keyword javaCommonClass java.lang.Long          Long
