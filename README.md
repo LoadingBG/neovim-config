@@ -1,18 +1,12 @@
 # neovim-config
-Configuration for NeoVim
+Configuration for NeoVim in WSL on Ubuntu 20.04
 
 ## Structure
 ```
 .
-├── coc-settings.json -> coc.nvim settings
-├── functions         -> custom functions
-├── init.vim          -> init.vim
-├── plugins           -> plugins
-│   ├── cosmetics     -> colorschemes and colorings
-│   ├── extensions    -> extension functionality
-│   │   ├── coc       -> coc.nvim plugin configs
-│   ├── plugins.vim   -> plugin loader
-│   └── syntax        -> syntax higlighting and support plugins
-├── settings          -> neovim settings
-└── syntax            -> custom syntax files
+├── init.lua      -> init.lua
+└── lua           -> config
+    ├── functions -> custom functions
+    └── plugins   -> plugins
 ```
+Every folder has a `loader.lua` file which loads the contents of the folder.
