@@ -4,6 +4,10 @@ require("indent_blankline").setup {
 	char = "│",
 	buftype_exclude = { "terminal" },
 	char_highlight_list = { "One", "Two", "Three", "Four", "Five", "Six", "Seven" },
+	context_patterns = {
+		"class", "function", "method", "block", "list_literal", "selector",
+		"^if", "^table", "if_statement", "while", "for"
+	},
 	show_trailing_blankline_indent = false,
 	show_current_context = true
 }
