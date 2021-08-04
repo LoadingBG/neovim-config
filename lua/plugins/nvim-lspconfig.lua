@@ -13,7 +13,7 @@ local function isinstalled(value)
 	return false
 end
 
-local servers = { "clojure", "java" }
+local servers = { "clojure", "java", "rust" }
 for _, server in pairs(servers) do
 	if not isinstalled(server) then
 		lspinstall.install_server(server)

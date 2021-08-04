@@ -42,6 +42,10 @@ require("packer").startup(function()
 		after = "vim-airline"
 	}
 	use "rakr/vim-one"                                            -- Colorscheme
+	use {                                                         -- Indentation guides
+		"lukas-reineke/indent-blankline.nvim",
+		config = function() require "plugins/indent-blankline" end
+	}
 ----- Extensions
 	use {                                                         -- Multiple cursors support
 		"mg979/vim-visual-multi",

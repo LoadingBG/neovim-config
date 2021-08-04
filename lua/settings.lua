@@ -38,6 +38,8 @@ vim.o.listchars    = table.concat({        -- Set values for trailing characters
 vim.o.smartindent = true                   -- Enable smart indentation
 vim.o.tabstop     = 4                      -- Set tabulation size to 4
 vim.o.shiftwidth  = 4                      -- Number of spaces for indentation
-utils.augroup("indent_settings", {         -- Set indentation to 2 spaces for XML, Ruby and Lua
-	utils.genautocmd("FileType", { "xml", "ruby", "lua" }, "set shiftwidth=2 tabstop=2")
+utils.augroup("indent_settings", {         -- Configuration for specific filetypes
+	utils.genautocmd("FileType", { "xml", "ruby", "lua" }, "set shiftwidth=2 tabstop=2"),
+	utils.genautocmd("FileType", { "json" }, "set shiftwidth=2 tabstop=2 expandtab"),
+	utils.genautocmd("FileType", { "rust" }, "set noexpandtab")
 })
