@@ -11,7 +11,8 @@ require("packer").startup(function()
 	use {                                                         -- Autocompletion
 		"hrsh7th/nvim-compe",
 		config = function() require "plugins/nvim-compe" end,
-		event  = "InsertEnter"
+		event  = "InsertEnter",
+		as = "compe"
 	}
 	use {                                                         -- LSP configurations
 		"neovim/nvim-lspconfig",
@@ -20,16 +21,21 @@ require("packer").startup(function()
 	use "kabouzeid/nvim-lspinstall"                               -- LSP installer
 	use {                                                         -- Snippets solution
 		"hrsh7th/vim-vsnip",
-		event = "InsertCharPre"
+		after = "compe"
 	}
 	use {                                                         -- Collection of snippets
 		"rafamadriz/friendly-snippets",
-		event = "InsertCharPre"
+		after = "compe"
 	}
 	use {                                                         -- Linting engine
 		"dense-analysis/ale",
 		config = function() require "plugins/ale" end
 	}
+	--use {
+	--	"neoclide/coc.nvim",
+	--	branch = "release",
+	--	config = function() require "plugins/coc-nvim" end
+	--}
 	--- Cosmetics
 	-- TODO: maybe replace later?
 	require "plugins/vim-airline"
@@ -41,12 +47,16 @@ require("packer").startup(function()
 		"ntpeters/vim-airline-colornum",
 		after = "vim-airline"
 	}
+	use {                                                         -- Icons
+		"kyazdani42/nvim-web-devicons",
+		as = "icons"
+	}
 	use "rakr/vim-one"                                            -- Colorscheme
 	use {                                                         -- Indentation guides
 		"lukas-reineke/indent-blankline.nvim",
 		config = function() require "plugins/indent-blankline" end
 	}
------ Extensions
+	--- Extensions
 	use {                                                         -- Multiple cursors support
 		"mg979/vim-visual-multi",
 		event = "BufRead"
@@ -55,18 +65,18 @@ require("packer").startup(function()
 		"tweekmonster/startuptime.vim",
 		cmd = "StartupTime"
 	}
------ Highlighting
+	--- Highlighting
 	use {                                                         -- Color highlighter
 		"norcalli/nvim-colorizer.lua",
 		config = function() require "plugins/nvim-colorizer" end,
 		after = "nvim-treesitter"
-	}
+	} 
 	use {                                                         -- Syntax highlighter
 		"nvim-treesitter/nvim-treesitter",
 		config = function() require "plugins/nvim-treesitter" end,
 		run = ":TSUpdate",
 		event = "BufEnter"
-	}
+	} 
 	--- Compile
 	utils.exec "PackerCompile"
 end)

@@ -2,7 +2,7 @@ local utils = require "utils"
 
 require("indent_blankline").setup {
 	char = "│",
-	buftype_exclude = { "terminal" },
+	buftype_exclude = { "terminal", "help" },
 	char_highlight_list = { "One", "Two", "Three", "Four", "Five", "Six", "Seven" },
 	context_patterns = {
 		"class", "function", "method", "block", "list_literal", "selector",

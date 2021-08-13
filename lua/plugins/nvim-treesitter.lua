@@ -1,6 +1,5 @@
 require("nvim-treesitter.configs").setup {
 	ensure_installed = {
-		"java",
 		"c",
 		"cpp",
 		"python",
@@ -21,5 +20,8 @@ require("nvim-treesitter.configs").setup {
 	highlight = { enable = true },
 	autopairs = { enable = true },
 	indent    = { enable = true },
-	autotag   = { enable = true }
+	autotag   = { enable = true },
+	highlight = {
+		disable = { "java" }
+	}
 }
